@@ -1,32 +1,17 @@
 HOSTNAME=`hostname`
 
-if [[ "$HOSTNAME" == baracuda1* ]]; then
+if [[ "$HOSTNAME" == moss* || "$HOSTNAME" == baracuda* ]]; then
+    export NCCL_ROOT=$HOME
     export CUDA_HOME="/usr/local/cuda"
-    export PATH="/usr/local/cuda/bin:$PATH"
-    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-    export LIBRARY_PATH=/usr/local/cuda/lib64:$LIBRARY_PATH 
-    export CPATH=/usr/local/cuda/include:$CPATH
-
-    export LD_LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LD_LIBRARY_PATH
-    export CPATH=~/.cudnn/active/cuda/include:$CPATH
-    export LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LIBRARY_PATH
-fi
-
-if [[ "$HOSTNAME" == moss1* || "$HOSTNAME" == baracuda* ]]; then
-     #  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
-     export CUDA_HOME="/usr/local/cuda"
-     export PATH="$PATH:/usr/local/cuda/bin"
-     export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-     export LIBRARY_PATH=/usr/local/cuda/lib64:$LIBRARY_PATH
-     export CPATH=/usr/local/cuda/include:$CPATH
-     export LD_LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LD_LIBRARY_PATH
-     export CPATH=~/.cudnn/active/cuda/include:$CPATH
-     export LIBRARY_PATH=~/.cudnn/active/cuda/lib64:$LIBRARY_PATH
+    export PATH="$CUDA_HOME/bin:$PATH"
+    export LD_LIBRARY_PATH=$NCCL_ROOT/lib:~/.cudnn/active/cuda/lib64:$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+    export LIBRARY_PATH=$NCCL_ROOT/lib:~/.cudnn/active/cuda/lib64:$CUDA_HOME/lib64:$LIBRARY_PATH
+    export CPATH=$NCCL_ROOT/include:~/.cudnn/active/cuda/include:$CUDA_HOME/include:$CPATH
 else
-     export PATH=/orange/brew/data/bin:$PATH
+    export PATH=/orange/brew/data/bin:$PATH
 fi
  
-export PATH=/home/fabien/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 export http_proxy="http://proxy.kuins.net:8080"
 export https_proxy="http://proxy.kuins.net:8080"
