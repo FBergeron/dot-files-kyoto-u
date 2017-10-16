@@ -123,6 +123,10 @@ augroup END
 :imap <S-F12>  
 :map <C-A> ggVG
 :imap <C-A> ggVG
+" Enlarge current window."
+:map <C-Up> <C-w>1+
+" Shrink current window."
+:map <C-Down> <C-w>1-
 :map <C-s> ?\<<CR>v/\><CR><Left>"sx/\<<CR>"sP<Right>v/\><CR><Left>"sx?,<CR>"sP<Right>
 :imap <C-s> ?\<<CR>v/\><CR><Left>"sx/\<<CR>"sP<Right>v/\><CR><Left>"sx?,<CR>"sP<Right>
 :set columns=132
