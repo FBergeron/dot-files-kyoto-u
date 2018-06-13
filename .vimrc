@@ -147,3 +147,4 @@ if has("cscope")
         cs add $CSCOPE_DB
     endif
 endif
+autocmd FileType make setlocal noexpandtab
