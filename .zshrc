@@ -12,6 +12,13 @@ bindkey '^R' history-incremental-search-backward
 
 set -o emacs
 
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
