@@ -41,3 +41,7 @@ settitle() {
 #alias tmux="TERM=screen-256color-bce LD_PRELOAD=/lib64/libncurses.so.5 tmux"
 
 HOSTNAME=`hostname`
+
+export PATH=$HOME/.rbenv/bin:$PATH
+
+eval "$(rbenv init -)"
