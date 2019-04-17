@@ -5,8 +5,8 @@
 :set laststatus=2
 ":set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:¿
 :set exrc
-:set relativenumber
-:set number
+":set relativenumber
+":set number
 :set secure
 :set showmatch
 :set backspace=2
