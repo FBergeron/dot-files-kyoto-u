@@ -13,12 +13,6 @@ fi
  
 export PATH=$HOME/bin:$PATH
 
-export http_proxy="http://proxy.kuins.net:8080"
-export https_proxy="http://proxy.kuins.net:8080"
-export HTTP_proxy="http://proxy.kuins.net:8080"
-export HTTPS_proxy="http://proxy.kuins.net:8080"
-export ftp_proxy="http://proxy.kuins.net:8080"
-export FTP_PROXY="http://proxy.kuins.net:8080"
 export EDITOR=vim
 export LANG=en_US.UTF-8
 
