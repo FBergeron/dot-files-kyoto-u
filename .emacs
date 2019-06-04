@@ -1,6 +1,7 @@
 ;;;
 ;;; Package manager.
 ;;;
+
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -50,3 +51,4 @@
 (define-key evil-window-map (kbd "<right>") 'evil-window-right)
 (define-key evil-window-map (kbd "<left>") 'evil-window-left) 
 
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
