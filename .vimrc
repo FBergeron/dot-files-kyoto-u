@@ -92,6 +92,8 @@ augroup END
     :au!
     :autocmd BufNewFile,BufRead *.cal setf cal
 :augroup END
+" Remove trailing whitespaces for some file types.
+:autocmd FileType c,cpp,css,java,php,pl,py,rb autocmd BufWritePre <buffer> %s/\s\+$//e
 ":augroup XMLFiles
 "    :au!
 "    :autocmd BufRead *.xml map = ":silent 1,$!tidy -xml -indent -quiet 2>/dev/null"
