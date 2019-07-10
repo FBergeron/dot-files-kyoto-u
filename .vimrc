@@ -150,3 +150,10 @@ if has("cscope")
     endif
 endif
 autocmd FileType make setlocal noexpandtab
+function! SetupEnvironment()
+    if filereadable(".vimlocal")
+        silent! source .vimlocal
+    endif
+endfunction
+
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
