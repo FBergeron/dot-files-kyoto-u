@@ -116,5 +116,3 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
 fi
 
 eval "$(rbenv init -)"
-
-source /etc/profile.d/undistract-me.sh
