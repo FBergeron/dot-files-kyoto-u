@@ -80,7 +80,8 @@ compinit
 alias ls='ls --color=auto'
 
 export DEB_BUILD_OPTIONS="parallel=6"
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
+# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
 export FTP_HOST=10.228.146.73
 export FTP_USER=fred
