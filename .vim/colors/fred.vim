@@ -17,7 +17,7 @@ highlight Identifier ctermfg=6                        guifg=#00c0c0
 highlight Statement  ctermfg=3             cterm=bold guifg=#c0c000               gui=bold
 highlight PreProc    ctermfg=10                       guifg=#00ff00
 highlight Type       ctermfg=2                        guifg=#00c000
-highlight Special    ctermfg=12                       guifg=#0000ff
+highlight Special    ctermfg=12                       guifg=#6666ff
 highlight Error                 ctermbg=9                           guibg=#ff0000
 highlight Todo       ctermfg=4  ctermbg=3             guifg=#000080 guibg=#c0c000
 highlight Directory  ctermfg=2                        guifg=#00c000
