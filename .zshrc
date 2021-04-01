@@ -116,4 +116,4 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
     fortune
 fi
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
