@@ -14,3 +14,5 @@ lg = !"git lg1"
 	default = simple
 [diff]
 	tool = vimdiff
+[pull]
+	rebase = true
